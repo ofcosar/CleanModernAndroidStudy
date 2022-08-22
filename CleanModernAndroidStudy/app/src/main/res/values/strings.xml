@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CleanModernAndroidStudy</string>
+    <string-array name="foods">
+        <item>biryani</item>
+        <item>burger</item>
+        <item>butter-chicken</item>
+        <item>dessert</item>
+        <item>dosa</item>
+        <item>idly</item>
+        <item>pasta</item>
+        <item>pizza</item>
+        <item>rice</item>
+        <item>samosa</item>
+    </string-array>
 </resources>
