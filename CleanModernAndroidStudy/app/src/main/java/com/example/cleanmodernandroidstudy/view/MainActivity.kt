@@ -16,10 +16,11 @@ import com.example.cleanmodernandroidstudy.R
 import com.example.cleanmodernandroidstudy.callbacks.UpdateImageListener
 import com.example.cleanmodernandroidstudy.databinding.ActivityMainBinding
 import com.example.cleanmodernandroidstudy.viewmodel.FoodSelectViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val viewModel : FoodSelectViewModel by viewModels()
     private lateinit var binding : ActivityMainBinding

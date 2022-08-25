@@ -1,7 +1,9 @@
 package com.example.cleanmodernandroidstudy.repository
 
-import com.example.cleanmodernandroidstudy.service.RetrofitInstance
+import com.example.cleanmodernandroidstudy.service.GetImageService
 
-class Repository {
-    val imageService = RetrofitInstance.getImageService()
+import javax.inject.Inject
+
+class Repository @Inject constructor(val imageService: GetImageService) {
+
 }

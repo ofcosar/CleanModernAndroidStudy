@@ -7,15 +7,17 @@ import androidx.lifecycle.viewModelScope
 import com.example.cleanmodernandroidstudy.callbacks.UpdateImageListener
 import com.example.cleanmodernandroidstudy.model.ImageModel
 import com.example.cleanmodernandroidstudy.repository.Repository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.Response
+import javax.inject.Inject
 
-class FoodSelectViewModel : ViewModel() {
+@HiltViewModel
+class FoodSelectViewModel  @Inject constructor(private val repository: Repository)  : ViewModel() {
     private var _imageUrl = MutableLiveData("")
-    private val repository = Repository()
     private var imageListener : UpdateImageListener? = null
     val imageUrl get() = _imageUrl
     private val foods = arrayOf("biryani","burger", "butter", "dessert" ,"dosa" ,"idly", "pasta", "pizza", "rice", "samosa")
